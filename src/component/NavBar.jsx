@@ -4,7 +4,8 @@ function NavBar() {
    
   return (
     <>
-      <nav className="navbar navbar-expand-sm navbar-dark b"  style={{backgroundColor : '#ea641b'}}> 
+      <nav className="navbar navbar-expand-lg navbar-light"  style={{backgroundColor : '#ea641b'}}> 
+      
   <div className="container-fluid">
     <ul className="navbar-nav">
       <li className="nav-item">

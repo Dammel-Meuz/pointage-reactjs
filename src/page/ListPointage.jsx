@@ -21,7 +21,7 @@ const ListPointage=async () =>{
     <div class="d-flex justify-content-center">
     <div className="col-md-6 p-4 m-4" >
     <h1>Pointage</h1>
-    <div  style={{backgroundColor : '#ea641b',
+    <div  style={{backgroundColor : '',
        height: '600px',
        border: '1px solid black',
        overflow: 'scroll',}}>

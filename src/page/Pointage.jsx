@@ -142,7 +142,7 @@ const setData= async(phonePointer)=>{
     </div>
     <div className="col-md-6 p-4 m-4" >
         <h1>Liste de Pointage du {thisDate}</h1>
-        <div  style={{backgroundColor : '#ea641b',
+        <div  style={{backgroundColor : '',
        border: '1px solid black',
        overflow: 'scroll',}}>
     <table className="table table-striped table-bordered">
@@ -150,7 +150,7 @@ const setData= async(phonePointer)=>{
      <thead>
        <tr>
          <th scope="col">id</th>
-         <th scope="col">pointerPhones</th>
+         <th scope="col">Phones</th>
          <th scope="col">date</th>
          <th scope="col">heurDarriver</th>
          <th scope="col">heurDepart</th>

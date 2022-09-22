@@ -1,4 +1,5 @@
 import {useState,useEffect} from 'react'
+import TablePointer from './TablePointer'
 
 function Addpointer() {
 
@@ -46,9 +47,15 @@ const addPointer = async (newPointer) => {
           }))
       
       }
-      const handleSubmit=()=>{
-
+      const handleSubmit=(e)=>{
+        e.preventDefault()
       addPointer(dataPointer)
+      setDataPointer({
+        prenom:'',
+        nom:'',
+        phone:'',
+        email:''
+      })
        //console.log(pointers)
       }
       useEffect(() => {
@@ -64,7 +71,10 @@ const addPointer = async (newPointer) => {
     <div class="d-flex justify-content-start">
     <div className="col-md-1"></div>
   <div className='col-md-4 p-4 m-4'>
-    <form onSubmit={handleSubmit}>
+    <div className="card p-4 m-10 border-primary ">
+      <div className="card-title text-center"><h1>Ajouter un pointeur</h1></div>
+      <div className="card-body p-4">  
+        <form onSubmit={handleSubmit}>
     <div className="mb-3 ">
       <label for="prenom" className="form-label">Prenom</label>
       <input type="text" className="form-control" id="prenom" placeholder="prenom" value={prenom} onChange={onChange} required style={{backgroundColor : '#85acdc'}}/>
@@ -84,39 +94,14 @@ const addPointer = async (newPointer) => {
    <input type='submit' className="btn" value="Ajout" style={{backgroundColor : '#85acdc'}} />
     </form>
     </div>
-    <div className="col-md-6 p-4 m-4">
-        <h1>Pointer</h1>
-        <div  style={{backgroundColor : '#ea641b',
-       height: '600px',
-       border: '1px solid black',
-       overflow: 'scroll',}}>
-    <table className="table table-striped table-bordered overflow-scroll h-10px">
-     
-     <thead>
-       <tr>
-         <th scope="col">id</th>
-         <th scope="col">prenom</th>
-         <th scope="col">nom</th>
-         <th scope="col">phone</th>
-         <th scope="col">email</th>
-       </tr>
-     </thead>
-     {pointers.map((pointer)=>(
-                <tbody>
-                <tr key={pointer.id}>
-                <td>{pointer.id}</td>
-                  <td>{pointer.prenom}</td>
-                  <td>{pointer.nom}</td>
-                  <td>{pointer.phone}</td>
-                  <td>{pointer.email}</td>
-                </tr>
-              </tbody>
-             ))}
-    
-   </table>
-   </div>
-   </div>
+
     </div>
+    </div>
+    <div className="col-md-6 p-4 m-4">
+      <TablePointer pointers={pointers}/>
+   
+   </div>
+   </div>
   )
 }
 

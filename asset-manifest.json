@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/PointadeDefarsci/static/css/main.7126f364.css",
+    "main.js": "/PointadeDefarsci/static/js/main.70fa3cf5.js",
+    "static/js/787.5c59aecc.chunk.js": "/PointadeDefarsci/static/js/787.5c59aecc.chunk.js",
+    "index.html": "/PointadeDefarsci/index.html",
+    "main.7126f364.css.map": "/PointadeDefarsci/static/css/main.7126f364.css.map",
+    "main.70fa3cf5.js.map": "/PointadeDefarsci/static/js/main.70fa3cf5.js.map",
+    "787.5c59aecc.chunk.js.map": "/PointadeDefarsci/static/js/787.5c59aecc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7126f364.css",
+    "static/js/main.70fa3cf5.js"
+  ]
+}
